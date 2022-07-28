@@ -1,6 +1,6 @@
 from flask import Flask, request
 
-from utils import get_password, requirements_return, get_fake, astronavt_get, average_all
+from flask.utils import get_password, requirements_return, get_fake, astronavt_get, average_all
 
 app = Flask(__name__)
 
@@ -45,7 +45,6 @@ def astronavt():
 @app.route('/average/')
 def average():
     return average_all()
-print('Git')
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
 
